@@ -34,6 +34,7 @@ fi
 # LIB_GIT=v1.10.0-94-g350b0b47f
 
 rm -rf ${LIB_VPX}
+mkdir ${LIB_VPX}
 echo -e "\n========== Fetching library source for: ${LIB_VPX} (${LIB_GIT}) =========="
-wget -O- https://github.com/webmproject/libvpx/archive/refs/tags/${LIB_GIT}.tar.gz | tar xz --strip-components=1 --one-top-level=${LIB_VPX}
+wget -O- https://github.com/webmproject/libvpx/archive/refs/tags/${LIB_GIT}.tar.gz | tar xz --strip-components=1 -C ${LIB_VPX}
 echo -e "========== Completed libvpx library source update =========="
